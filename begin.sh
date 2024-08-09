@@ -19,3 +19,4 @@ CXX=clang++ CC=clang ./build.sh
 echo "Thiết lập gần hoàn tất."
 echo "Để cấu hình lại, nhập lệnh \"nano ~/ccminer/config.json\""
 echo "Sau khi cài đặt xong khởi động lại máy để đào ổn định hơn."
+
