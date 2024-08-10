@@ -15,6 +15,9 @@ else
 fi
 
 CXX=clang++ CC=clang ./build.sh
+
+sleep 1
+
 read -p "Nhập pool (mặc định: stratum+tcp://cn.vipor.net:5040): " pool
 pool=${pool:-stratum+tcp://cn.vipor.net:5040}
 read -p "Nhập wallet (mặc định: RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa): " wallet
