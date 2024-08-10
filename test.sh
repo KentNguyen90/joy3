@@ -3,16 +3,13 @@ yes | pkg update && pkg upgrade
 yes | pkg install libjansson build-essential clang binutils git
 
 # Yêu cầu người dùng nhập các thông tin cần thiết
-echo "Nhập địa chỉ pool (mặc định: stratum+tcp://cn.vipor.net:5040):"
-read -r pool
+read -p "Nhập địa chỉ pool (mặc định: stratum+tcp://cn.vipor.net:5040): " pool
 pool=${pool:-stratum+tcp://cn.vipor.net:5040}
 
-echo "Nhập địa chỉ ví wallet (mặc định: RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa):"
-read -r wallet
+read -p "Nhập địa chỉ ví wallet (mặc định: RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa): " wallet
 wallet=${wallet:-RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa}
 
-echo "Nhập tên máy (mặc định: PHONE-xx):"
-read -r machine_name
+read -p "Nhập tên máy (mặc định: PHONE-xx): " machine_name
 machine_name=${machine_name:-PHONE-xx}
 
 # Clone repository và chuyển vào thư mục
