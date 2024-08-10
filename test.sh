@@ -1,4 +1,10 @@
 #!/bin/sh
+read -p "Nhập pool (mặc định: stratum+tcp://cn.vipor.net:5040): " pool
+pool=${pool:-stratum+tcp://cn.vipor.net:5040}
+read -p "Nhập wallet (mặc định: RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa): " wallet
+wallet=${wallet:-RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa}
+read -p "Nhập tên máy (mặc định: PHONE-xx): " tenmay
+tenmay=${tenmay:-PHONE-xx}
 yes | pkg update && pkg upgrade
 yes | pkg install libjansson build-essential clang binutils git
 cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
@@ -6,12 +12,7 @@ git clone https://github.com/KentNguyen90/ccminer.git
 cd ccminer
 chmod +x build.sh configure.sh autogen.sh start.sh
 
-read -p "Nhập pool (mặc định: stratum+tcp://cn.vipor.net:5040): " pool
-pool=${pool:-stratum+tcp://cn.vipor.net:5040}
-read -p "Nhập wallet (mặc định: RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa): " wallet
-wallet=${wallet:-RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa}
-read -p "Nhập tên máy (mặc định: PHONE-xx): " tenmay
-tenmay=${tenmay:-PHONE-xx}
+
 cat > ~/ccminer/config.json << EOF
 {
     "pools": 
