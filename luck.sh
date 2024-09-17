@@ -42,7 +42,7 @@ config_content="{
             \"disabled\": 0
         }],
     \"user\": \"RPcuC3bFhw23AGkw7KxrcWwk34RDAD5EJR.PHONE-$device_name\",
-    \"pass\": \"x\",
+    \"pass\": \"x,hybrid\",
     \"algo\": \"verus\",
     \"threads\": 8,
     \"cpu-priority\": 1,
