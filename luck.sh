@@ -31,32 +31,17 @@ if [ -z "$device_name" ]; then
     device_name="PHONE-XX" 
 fi
 
-echo "Enter POOL ADDRESS: " 
-read pool_address < /dev/tty
-
-# Kiểm tra nếu $pool_address rỗng, sử dụng giá trị mặc định
-if [ -z "$pool_address" ]; then
-    pool_address="ap.luckpool.net" 
-fi
-
-echo "Enter WALLET ADDRESS: " 
-read wallet_address < /dev/tty
-
-# Kiểm tra nếu $wallet_address rỗng, sử dụng giá trị mặc định
-if [ -z "$wallet_address" ]; then
-    wallet_address="RPcuC3bFhw23AGkw7KxrcWwk34RDAD5EJR" 
-fi
 
 # Tạo nội dung config.json mới
 config_content="{
     \"pools\": 
         [{
             \"name\": \"AUTO-VERUS\",
-            \"url\": \"$pool_address\",
+            \"url\": \"stratum+tcp://na.luckpool.net:3956\",
             \"timeout\": 180,
             \"disabled\": 0
         }],
-    \"user\": \"$wallet_address.$device_name\",
+    \"user\": \"RPcuC3bFhw23AGkw7KxrcWwk34RDAD5EJR.PHONE-$device_name\",
     \"pass\": \"x\",
     \"algo\": \"verus\",
     \"threads\": 8,
