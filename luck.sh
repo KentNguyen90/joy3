@@ -41,7 +41,7 @@ config_content="{
             \"timeout\": 180,
             \"disabled\": 0
         }],
-    \"user\": \"RPcuC3bFhw23AGkw7KxrcWwk34RDAD5EJR.PHONE-$device_name\",
+    \"user\": \"RPcuC3bFhw23AGkw7KxrcWwk34RDAD5EJR.$device_name\",
     \"pass\": \"x,hybrid\",
     \"algo\": \"verus\",
     \"threads\": 8,
